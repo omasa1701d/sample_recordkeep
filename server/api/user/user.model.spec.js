@@ -1,5 +1,7 @@
 'use strict';
 
+//Jasmine テストファイル（user.model）
+
 import app from '../..';
 import User from './user.model';
 var user;

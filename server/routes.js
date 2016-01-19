@@ -15,6 +15,8 @@ export default function(app) {
   app.use('/auth', require('./auth'));
 
   // All undefined asset or api routes should return a 404
+  //ここまででトラップされていないapi以下のファイルや、クライアントがアクセスするはずのない
+  //components以下などへのアクセスを弾くため。
   app.route('/:url(api|auth|components|app|bower_components|assets)/*')
    .get(errors[404]);
 
